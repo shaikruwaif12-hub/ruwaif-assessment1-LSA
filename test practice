@@ -1,0 +1,89 @@
+#Q3
+word=input("enter a string:")
+count=0
+for i in word:
+    if i.lower() in "aeiou":
+        count +=1
+print("Total number of vowels:",count)
+        
+
+#Q4
+numbers=[1,2,3,4,5,6,7,8,9]
+even=[]
+odd=[]
+for i in numbers:
+    if i %2==0:
+        even.append(i)
+    else:
+        odd.append(i)
+        print("Even Numbers:",even)
+        print("Odd Numbers:",odd)
+ 
+ 
+#Q5
+numbers=[1,2,3,4,5,6,7,18,19,67] 
+largest=numbers[0]
+for i in numbers:
+    if i > largest:
+        largest=i
+        print(largest)      
+
+
+
+
+ #Q6
+# Password Strength Checker
+
+password = input("Enter Password: ")
+
+has_upper = False
+has_lower = False
+has_digit = False
+has_special = False
+
+# Check each character
+for i in password:
+    if i.isupper():
+        has_upper = True
+    elif i.islower():
+        has_lower = True
+    elif i.isdigit():
+        has_digit = True
+    else:
+        has_special = True
+
+# Validate password
+if (len(password) >= 8 and has_upper and has_lower and
+        has_digit and has_special):
+    print("Strong Password")
+else:
+    print("Invalid")
+    
+    
+    
+#Q7
+# Event Attendance Analysis
+
+registered = {"Asha", "Rahul", "John", "Meera", "Ali", "Sara"}
+attended = {"Asha", "John", "Meera", "Ali"}
+
+# Number of registered participants
+total_registered = len(registered)
+
+# Number of attendees
+total_attendees = len(attended)
+
+# People who registered but did not attend
+absent = registered - attended
+
+# Attendance percentage
+attendance_percentage = (total_attendees / total_registered) * 100
+
+# Display results
+print("Number of Registered Participants:", total_registered)
+print("Number of Attendees:", total_attendees)
+print("People who Registered but did not Attend:", absent)
+print("Attendance Percentage:", attendance_percentage, "%")
+
+
+#Q
